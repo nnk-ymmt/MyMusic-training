@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_pattern" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-SW-cyu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-Yx-6sS">
+                                <rect key="frame" x="52" y="293" width="150" height="150"/>
+                                <state key="normal" image="cymbal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cymbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgb-rc-Usi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-NX-mOG">
+                                <rect key="frame" x="212" y="293" width="150" height="150"/>
+                                <state key="normal" image="guitar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="guitar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p2M-Qo-r0e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTH-Jk-NB4">
+                                <rect key="frame" x="99.5" y="504" width="55" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8m-3G-WvC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnJ-WI-iE7">
+                                <rect key="frame" x="256.5" y="504" width="61" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QGV-fb-8PE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KFD-Yx-6sS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="0IR-lb-es7"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="52Z-0z-h8r"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="80C-D6-jXq"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ls-Em-C1i"/>
+                            <constraint firstItem="hnJ-WI-iE7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="BAG-vh-kdL"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H4g-cD-BqO"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lud-cz-qS7"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NDk-YP-97h"/>
+                            <constraint firstItem="zaB-NX-mOG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="SHF-uv-eFW"/>
+                            <constraint firstItem="hnJ-WI-iE7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="T5q-6P-IKw"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xug-2N-dyL"/>
+                            <constraint firstItem="KFD-Yx-6sS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="Zof-Gw-Bxc"/>
+                            <constraint firstAttribute="bottom" secondItem="e6G-SW-cyu" secondAttribute="bottom" id="ahL-mZ-EOP"/>
+                            <constraint firstAttribute="bottom" secondItem="e6G-SW-cyu" secondAttribute="bottom" id="d5n-6M-qXZ"/>
+                            <constraint firstItem="tTH-Jk-NB4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="dOG-NO-2pP"/>
+                            <constraint firstItem="tTH-Jk-NB4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="eUh-Ca-N3e"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fkf-Qm-Bgv"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hqD-Za-ut4"/>
+                            <constraint firstAttribute="bottom" secondItem="e6G-SW-cyu" secondAttribute="bottom" id="i6D-BF-Mr1"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iFW-Jx-8Bo"/>
+                            <constraint firstAttribute="bottom" secondItem="e6G-SW-cyu" secondAttribute="bottom" id="j8d-G7-qeq"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oYS-oM-vjA"/>
+                            <constraint firstItem="zaB-NX-mOG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="oou-BG-MtJ"/>
+                            <constraint firstItem="e6G-SW-cyu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tJ3-ix-OV5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_pattern" width="1334" height="1334"/>
+        <image name="cymbal" width="150" height="150"/>
+        <image name="guitar" width="150" height="150"/>
+    </resources>
 </document>
